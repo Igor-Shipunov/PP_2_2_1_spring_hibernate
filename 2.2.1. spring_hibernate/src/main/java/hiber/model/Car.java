@@ -9,9 +9,9 @@ public class Car implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @OneToOne
+    /*@OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private User user;
+    private User user;*/
     @Column
     private String model;
     @Column
@@ -32,9 +32,9 @@ public class Car implements Serializable {
                 '}';
     }
 
-    public void setUser(User user) {
+    /*public void setUser(User user) {
         this.user = user;
-    }
+    }*/
 
     public void setModel(String model) {
         this.model = model;
@@ -44,9 +44,9 @@ public class Car implements Serializable {
         this.series = series;
     }
 
-    public User getUser() {
+    /*public User getUser() {
         return user;
-    }
+    }*/
 
     public String getModel() {
         return model;

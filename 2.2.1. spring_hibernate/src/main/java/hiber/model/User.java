@@ -8,7 +8,9 @@ import javax.persistence.*;
 @Table(name = "users")
 public class User {
 
-    @OneToOne(mappedBy = "user")
+    /*@OneToOne(mappedBy = "user")*/
+    @OneToOne
+    @JoinColumn(name = "car_id")
     @Cascade(org.hibernate.annotations.CascadeType.ALL)
     private Car car;
 
@@ -67,7 +69,7 @@ public class User {
 
     public void setCar(Car car) {
         this.car = car;
-        car.setUser(this);
+        //car.setUser(this);
     }
 
     public Car getCar() {

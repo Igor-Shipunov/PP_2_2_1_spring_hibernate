@@ -11,7 +11,8 @@ import java.util.List;
 @Repository
 public class UserDaoImp implements UserDao {
 
-   private String HQL = "SELECT car.user FROM Car car WHERE car.model=:model and car.series=:series";
+   //private String HQL = "SELECT car.user FROM Car car WHERE car.model=:model and car.series=:series";
+   private String HQL = "FROM User user WHERE user.car.model=:model and user.car.series=:series";
 
    @Autowired
    private SessionFactory sessionFactory;
